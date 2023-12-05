@@ -26,7 +26,7 @@
                             </a>
                         </li>
                         <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Chats">
-                            <a  [routerLink]="[{ outlets: { chatside: ['chats'] } }]" class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" href="#pills-chat" role="tab">
+                            <a  routerLink="/gapshap" class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" href="#pills-chat" role="tab">
                                 <i class="ri-message-3-line"></i>
                             </a>
                         </li>
@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Contacts">
-                            <a class="nav-link" [routerLink]="[{ outlets: { chatside: ['contacts'] } }]"  id="pills-contacts-tab" data-bs-toggle="pill" href="#pills-contacts" role="tab">
+                            <a class="nav-link" [routerLink]="[{ outlets: { chatside: ['contacts'] } }]"   id="pills-contacts-tab" data-bs-toggle="pill" href="#pills-contacts" role="tab">
                                 <i class="ri-contacts-line"></i>
                             </a>
                         </li>
@@ -84,7 +84,5 @@
                 <!-- Side menu user -->
             </div>
             <!-- end left sidebar-menu -->
-
-        <!-- start chat-leftsidebar -->
 
    
