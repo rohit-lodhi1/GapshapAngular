@@ -35,6 +35,14 @@ $(document).ready(function() {
 
     // Handle user-profile-hide click event
     $("#user-profile-hide").click(function() {
+       
+        $(".user-profile-sidebar").hide();
+    });
+
+
+     // Handle user-profile-hide click event
+     $("#user-profile-hide1").click(function() {
+       
         $(".user-profile-sidebar").hide();
     });
 

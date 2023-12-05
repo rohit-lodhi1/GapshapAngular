@@ -11,17 +11,21 @@ import { SettingsComponent } from './user/settings/settings.component';
 import { ConversationComponent } from './user/conversation/conversation.component';
 
 const routes: Routes = [
+
   {
     path: 'gapshap', component: UserHomeComponent,
     children: [
-      {
-        path: '', component: UserDashboardComponent
-      },
+      // {
+      //   path: '', component: UserDashboardComponent
+      // },
       {
         path: 'profile', component: ProfileComponent, outlet: 'chatside'
       },
       {
-        path: 'chats', component: ChatsComponent, outlet: 'chatside'
+        path: '', component: ChatsComponent, outlet: 'chatside'
+      },
+      {
+        path: '', component: ChatSideComponent, outlet: 'convermain'
       },
       {
         path: 'groups', component: GroupsComponent, outlet: 'chatside'

@@ -17,6 +17,8 @@
 
   <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
   <!-- Bootstrap Css -->
   <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
   <!-- Icons Css -->
@@ -29,7 +31,31 @@
 <body>
   <app-root></app-root>
 
-</body>
+  <script>
+      // Ensure the DOM is ready before executing your script
+      $(document).ready(function() {
+            // Handle user-profile-hide click event
+            $("#user-profile-hide").click(function() {
+             
+                $(".user-profile-sidebar").hide();
+            });
+
+            // Handle user-profile-show click event
+            $(".user-profile-show").click(function() {
+                $(".user-profile-sidebar").show();
+            });
+
+            // Handle chat-user-list item click event
+            $(".chat-user-list li a").click(function() {
+                $(".user-chat").addClass("user-chat-show");
+            });
+
+            // Handle user-chat-remove click event
+            $(".user-chat-remove").click(function() {
+                $(".user-chat").removeClass("user-chat-show");
+            });
+        });
+</script>
 <!-- JAVASCRIPT -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -46,5 +72,10 @@
 <script src="assets/js/pages/index.init.js"></script>
 
 <script src="assets/js/app.js"></script>
+
+
+</body>
+
+
 
 </html>
