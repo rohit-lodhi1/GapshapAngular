@@ -9,14 +9,67 @@
                         <i class="ri-more-2-fill"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addContact-exampleModal">Edit</a>
                         <a class="dropdown-item" href="#">Action</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Another action</a>
                     </div>
                 </div>
             </div>
+            
             <h4 class="mb-0">My Profile</h4>
+
+              <!-- Start Edit Profile Modal -->
+              <div class="modal fade" id="addContact-exampleModal" tabindex="-1" role="dialog" aria-labelledby="addContact-exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title font-size-16" id="addContact-exampleModalLabel"> Profile</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body p-4">
+                            <form>
+                                <div class="text-center p-4 border-bottom">
+                                    <div class="mb-4">
+                                        <img src="assets/images/users/avatar-1.jpg" (click)="openFileInput()" class="rounded-circle avatar-lg img-thumbnail" alt="">
+                                        <label class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top"
+                                        title="Attached File">
+                                        <!-- <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Attached File">   -->
+                                         
+                                        
+                                        <!-- </li> -->
+                                        <input type="file" style="display: none;" id="file"  />
+                                    </label>    
+                                    </div>
+                                </div>
+                              
+                                <div class="mb-3">
+                                    <label for="addcontactemail-input" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="addcontactemail-input" placeholder="Enter Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addcontactemail-input" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="addcontactemail-input" placeholder="Enter Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addcontactemail-input" class="form-label">Location</label>
+                                    <input type="text" class="form-control" id="addcontactemail-input" placeholder="Enter Location">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="addcontact-invitemessage-input" class="form-label">About</label>
+                                    <textarea class="form-control" id="addcontact-invitemessage-input" rows="3" placeholder="Enter about"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Edit Profile Modal -->
         </div>
 
         <div class="text-center p-4 border-bottom">

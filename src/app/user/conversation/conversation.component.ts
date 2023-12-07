@@ -9,7 +9,7 @@ declare var $:any;
 })
 export class ConversationComponent implements OnInit,AfterViewInit{
   ngAfterViewInit(): void {
-  //  this.div.nativeElement.style='width:100% !important'
+   
   }
   ngOnInit(): void {
     this.intializeBar();
@@ -57,8 +57,12 @@ intializeBar(){
 
 isProfileOpen = false;
 
-  toggleProfile() {
-    this.isProfileOpen = !this.isProfileOpen;
+  toggleProfile(open:boolean) {
+   if(open)
+    this.div.nativeElement.style='width:30% !important'
+  else
+  this.div.nativeElement.style='width:100% !important'
+  
   }
  
 }

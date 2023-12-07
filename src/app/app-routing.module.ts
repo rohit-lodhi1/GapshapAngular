@@ -9,8 +9,21 @@ import { GroupsComponent } from './user/groups/groups.component';
 import { ContactsComponent } from './user/contacts/contacts.component';
 import { SettingsComponent } from './user/settings/settings.component';
 import { ConversationComponent } from './user/conversation/conversation.component';
+import { LoginComponent } from './user/authentication/login/login.component';
+import { SignupComponent } from './user/authentication/signup/signup.component';
+import { ForgetPasswordComponent } from './user/authentication/forget-password/forget-password.component';
 
 const routes: Routes = [
+
+{
+  path:'login',component:LoginComponent
+},
+{
+  path:'signup',component:SignupComponent
+},
+{
+  path:'forget-password',component:ForgetPasswordComponent
+},
 
   {
     path: 'gapshap', component: UserHomeComponent,
