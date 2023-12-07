@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+
+  openFileInput() {
+    // Trigger a click on the hidden file input
+    const fileInput = document.getElementById("file") as HTMLInputElement;
+            fileInput.click();
+}
 }
