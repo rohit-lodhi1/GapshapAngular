@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserHomeComponent } from './user/user-home/user-home.component';
@@ -16,6 +16,11 @@ import { ConversationComponent } from './user/conversation/conversation.componen
 import { LoginComponent } from './user/authentication/login/login.component';
 import { SignupComponent } from './user/authentication/signup/signup.component';
 import { ForgetPasswordComponent } from './user/authentication/forget-password/forget-password.component';
+import { OtpVerificationComponent } from './user/authentication/otp-verification/otp-verification.component';
+import { AuthInterceptor } from './materials/authentication.interceptor';
+import { FormsModule } from '@angular/forms';
+import { NotificationsComponent } from './user/notifications/notifications.component';
+import { InvitaionsComponent } from './user/invitaions/invitaions.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +37,18 @@ import { ForgetPasswordComponent } from './user/authentication/forget-password/f
     ConversationComponent,
     LoginComponent,
     SignupComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    OtpVerificationComponent,
+    NotificationsComponent,
+    InvitaionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

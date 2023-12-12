@@ -16,18 +16,7 @@
                 <div class="card">
                     <div class="card-body p-4">
                         <div class="p-3">
-                            <form >
-
-                                <div class="mb-3">
-                                    <label class="form-label">Email</label>
-                                    <div class="input-group bg-light-subtle rounded-3  mb-3">
-                                        <span class="input-group-text text-muted" id="basic-addon5">
-                                            <i class="ri-mail-line"></i>
-                                        </span>
-                                        <input type="email" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="basic-addon5">
-                                        
-                                    </div>
-                                </div>
+                            <form (ngSubmit)="register()">
 
                                 <div class="mb-3">
                                     <label class="form-label">Username</label>
@@ -35,7 +24,18 @@
                                         <span class="input-group-text border-light text-muted" id="basic-addon6">
                                             <i class="ri-user-2-line"></i>
                                         </span>
-                                        <input type="text" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Username" aria-label="Enter Username" aria-describedby="basic-addon6">
+                                        <input type="text"  required name="userName" [(ngModel)]="userRegistration.userName" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Username" aria-label="Enter Username" aria-describedby="basic-addon6">
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <div class="input-group bg-light-subtle rounded-3  mb-3">
+                                        <span class="input-group-text text-muted" id="basic-addon5">
+                                            <i class="ri-mail-line"></i>
+                                        </span>
+                                        <input type="email" required  name="email" [(ngModel)]="userRegistration.email" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="basic-addon5">
                                         
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                         <span class="input-group-text border-light text-muted" id="basic-addon7">
                                             <i class="ri-lock-2-line"></i>
                                         </span>
-                                        <input type="password" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Password" aria-label="Enter Password" aria-describedby="basic-addon7">
+                                        <input type="password" required name="password" [(ngModel)]="userRegistration.password" class="form-control form-control-lg bg-light-subtle border-light" placeholder="Enter Password" aria-label="Enter Password" aria-describedby="basic-addon7">
                                         
                                     </div>
                                 </div>

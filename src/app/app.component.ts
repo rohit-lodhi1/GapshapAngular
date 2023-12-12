@@ -12,6 +12,7 @@ export class AppComponent implements OnInit{
   constructor(private scriptLoader: ScriptLoaderServiceService) {}
   ngOnInit(): void {
     this.loadScript();
+    
   }
 
   loadScript() {
