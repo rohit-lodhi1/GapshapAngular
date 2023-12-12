@@ -1,3 +1,5 @@
+import Swal, { SweetAlertIcon, SweetAlertPosition } from "sweetalert2";
+
 export class AppUtils {
 
 
@@ -73,4 +75,38 @@ export class AppUtils {
     //     { code: '1F6AD', desc: 'No smoking' }]
     //     }]
     // }
+
+
+
+    
+public  static showMessage(icons:SweetAlertIcon='error',title='Something went wrong',position:SweetAlertPosition='top'){
+    const Toast = Swal.mixin({
+      toast: true,
+      position: position,
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+
+    });
+    Toast.fire({
+      icon:icons,
+      title:title
+    })
+  }
+
+
+  public static showProcess(icon:SweetAlertIcon='error',title:string='Something went wrong'){
+    Swal.fire({
+        icon:icon,
+        title: title,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        }
+      })
+      
+  }
 }
+
+;

@@ -12,6 +12,9 @@ import { ConversationComponent } from './user/conversation/conversation.componen
 import { LoginComponent } from './user/authentication/login/login.component';
 import { SignupComponent } from './user/authentication/signup/signup.component';
 import { ForgetPasswordComponent } from './user/authentication/forget-password/forget-password.component';
+import { OtpVerificationComponent } from './user/authentication/otp-verification/otp-verification.component';
+import { NotificationsComponent } from './user/notifications/notifications.component';
+import { InvitaionsComponent } from './user/invitaions/invitaions.component';
 
 const routes: Routes = [
 
@@ -20,6 +23,9 @@ const routes: Routes = [
 },
 {
   path:'signup',component:SignupComponent
+},
+{
+  path:'otp',component:OtpVerificationComponent
 },
 {
   path:'forget-password',component:ForgetPasswordComponent
@@ -39,6 +45,12 @@ const routes: Routes = [
       },
       {
         path: '', component: ChatSideComponent, outlet: 'convermain'
+      },
+      {
+        path:'notifications',component:NotificationsComponent,outlet:'chatside'
+      },
+      {
+        path:'invitations',component:InvitaionsComponent,outlet:'chatside'
       },
       {
         path: 'groups', component: GroupsComponent, outlet: 'chatside'

@@ -25,6 +25,17 @@
                                 <i class="ri-user-2-line"></i>
                             </a>
                         </li>
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Invitations">
+                            <a  [routerLink]="[{ outlets: { chatside: ['invitations'] } }]" class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" href="#pills-chat" role="tab">
+                                <i class="ri-mail-line"></i>
+                            </a>
+                        </li> 
+                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Notifications">
+                            <a  [routerLink]="[{ outlets: { chatside: ['notifications'] } }]" class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" href="#pills-chat" role="tab">
+                                <i class="ri-notification-4-line"></i>
+                            </a>
+                        </li>
+
                         <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Chats">
                             <a  routerLink="/gapshap" class="nav-link active" id="pills-chat-tab" data-bs-toggle="pill" href="#pills-chat" role="tab">
                                 <i class="ri-message-3-line"></i>
@@ -40,11 +51,7 @@
                                 <i class="ri-contacts-line"></i>
                             </a>
                         </li>
-                        <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Settings">
-                            <a class="nav-link"  [routerLink]="[{ outlets: { chatside: ['settings'] } }]" id="pills-setting-tab" data-bs-toggle="pill" href="#pills-setting" role="tab">
-                                <i class="ri-settings-2-line"></i>
-                            </a>
-                        </li>
+                        
                         <li class="nav-item dropdown profile-user-dropdown d-inline-block d-lg-none">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="assets/images/users/avatar-1.jpg" alt="" class="profile-user rounded-circle">
@@ -53,7 +60,7 @@
                                 <a class="dropdown-item" [routerLink]="[{ outlets: { chatside: ['profile'] } }]">Profile <i class="ri-profile-line float-end text-muted"></i></a>
                                 <a class="dropdown-item"  [routerLink]="[{ outlets: { chatside: ['settings'] } }]" >Setting <i class="ri-settings-3-line float-end text-muted"></i></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item"    >Log out <i class="ri-logout-circle-r-line float-end text-muted"></i></a>
+                                <a class="dropdown-item"  (click)="logOut()"  >Log out <i class="ri-logout-circle-r-line float-end text-muted"></i></a>
                             </div>
                         </li>
                     </ul>
@@ -76,7 +83,7 @@
                                 <a class="dropdown-item" [routerLink]="[{ outlets: { chatside: ['profile'] } }]">Profile <i class="ri-profile-line float-end text-muted"></i></a>
                                 <a class="dropdown-item" [routerLink]="[{ outlets: { chatside: ['settings'] } }]" >Setting <i class="ri-settings-3-line float-end text-muted"></i></a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" >Log out <i class="ri-logout-circle-r-line float-end text-muted"></i></a>
+                                <a class="dropdown-item" (click)="logOut()">Log out <i class="ri-logout-circle-r-line float-end text-muted"></i></a>
                             </div>
                         </li>
                     </ul>
