@@ -19,7 +19,7 @@ import { InvitaionsComponent } from './user/invitaions/invitaions.component';
 const routes: Routes = [
 
 {
-  path:'login',component:LoginComponent
+  path:'',component:LoginComponent,pathMatch:'full'
 },
 {
   path:'signup',component:SignupComponent

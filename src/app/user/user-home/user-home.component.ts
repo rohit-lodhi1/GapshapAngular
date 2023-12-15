@@ -12,7 +12,10 @@ export class UserHomeComponent implements OnInit{
   constructor(private webSocketService:WebSocketService){}
   ngOnInit(): void {
     
-   this.webSocketService.initializeWebSocketConnection();
+   this.webSocketService.connect().subscribe((data)=>{
+    console.log(data+"---------");
+    
+   });
   }
 
 

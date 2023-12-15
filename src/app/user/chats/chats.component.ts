@@ -4,6 +4,7 @@ import { User } from '../models/user';
 import { ApiRoutes } from 'src/app/utils/api-routes';
 import { AuthenticationService } from '../services/authentication.service';
 import { MessageMappings } from 'src/app/Config/message-mappings';
+import { UserStatus } from 'src/app/utils/constants/user-status';
 declare var $: any;
 @Component({
   selector: 'app-chats',
@@ -22,13 +23,10 @@ export class ChatsComponent implements OnInit {
   users: User[] = [];
   imageUrl=ApiRoutes.IMAGE_URL;
   searchValue = "";
+  userStatus=UserStatus;
 
-  getAllUsers() {
+  getAllChatUsers() {
 
-    this.webSocketService.messageReceived.subscribe((data: any) => {
-      console.log(data);
-      //this.search();
-    })
   }
 
 
@@ -40,6 +38,7 @@ export class ChatsComponent implements OnInit {
     this.webSocketService.subscribe(MessageMappings.USER_SEARCH_GET).subscribe((data: any) => {
       console.log(data);
       this.users = data.data;
+      if(this.users)
       this.users=this.users.filter(f=>{
          return f.email !== this.authService.getEmail();
       })
