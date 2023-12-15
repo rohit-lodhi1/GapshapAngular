@@ -27,9 +27,9 @@ logOut(){
         title: "Logging out",
         icon: "success"
       });
-      this.webSocketService.disConnect(); 
       this.authService.logOut();
-      this.router.navigate(['login']);
+      
+      this.webSocketService.disConnect(); 
     }
   });
 }

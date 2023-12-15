@@ -41,7 +41,7 @@
                                                 <div class="chat-user-img online align-self-center me-3 ms-0">
                                                     <img [src]="imageUrl+user.profileName"
                                                         class="rounded-circle avatar-xs" alt="">
-                                                    <span *ngIf="user.userStatus?user.userStatus.isOnline:false" class="user-status"></span>
+                                                    <span *ngIf="user.userStatus?user.userStatus.status===userStatus.ONLINE:false" class="user-status"></span>
                                                 </div>
 
                                                 <div class="flex-grow-1 overflow-hidden">
